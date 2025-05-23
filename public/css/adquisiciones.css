@@ -1,0 +1,79 @@
+ input[type="text"] {
+     padding: 6px;
+     width: 200px;
+     margin-left: 10px;
+ }
+
+
+ .table-adquisiciones {
+     border-collapse: collapse;
+     width: 100%;
+     margin-top: 8px;
+     font-size: 12px;
+ }
+
+ .table-adquisiciones th,
+ .table-adquisiciones td {
+     padding: 4px;
+     border: 1px solid #ccc;
+ }
+
+ .table-adquisiciones th {
+     background-color: #f2f2f2;
+ }
+
+
+ .table-modal {
+     border-collapse: collapse;
+     width: 100%;
+     margin-top: 10px;
+ }
+
+ .table-modal th{
+    background-color: var(--azul-oscuro);
+    padding: 3px;
+    border: 1px solid #ccc;
+ }
+ .table-modal td {
+     padding: 6px;
+     border: 1px solid #ccc;
+ }
+
+ .table-modal th {
+     background-color: #f2f2f2;
+ }
+
+
+ button {
+     padding: 2px;
+     cursor: pointer;
+     margin: 2px;
+     font-size: 12px;
+ }
+
+ .modal {
+     display: none;
+     position: fixed;
+     z-index: 100;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.5);
+ }
+
+ .modal-content {
+     background-color: #fff;
+     margin: 100px auto;
+     padding: 20px;
+     border-radius: 8px;
+     width: 500px;
+ }
+
+ .modal-content-historia {
+     background-color: #fff;
+     margin: 100px auto;
+     padding: 20px;
+     border-radius: 8px;
+     width: 800px;
+ }

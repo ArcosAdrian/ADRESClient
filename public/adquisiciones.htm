@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADRES - Página de ejemplo</title>
+  <link rel="stylesheet" type="text/css" href="css/adres.css" />
+  <link rel="stylesheet" type="text/css" href="css/adquisiciones.css" />
+  <link rel="icon" href="recursos/favicon.ico" type="image/x-icon">
+  <!-- Liberias externas -->
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script src="js/adquisicion.js"></script>
+  <style>
+   
+
+  </style>
+</head>
+<body>
+  <header>
+    <div>&nbsp;<img src="recursos/logo-adres.png"
+        title="Administradora de los Recursos del Sistema General de Seguridad Social en Salud​" /></div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="#"><span style="color: #ded587;">Adquisiciones</span></a>
+      <a href="acerca_de.htm">Acerca de</a>
+    </nav>
+  </header>
+  <section class="section">
+
+    <h1>
+      Adquisiciones
+      <span>
+        <input type="text" id="filtro" placeholder="Buscar por nombre o email">
+        <button id="btnAdicionar" class="btn-verde">Adicionar Adquisición</button>
+      </span>
+    </h1>
+
+    <table id="tablaAdquisiciones" class="table-adquisiciones">
+      <thead>
+        <tr>
+          <th>Proveedor</th>
+          <th>Servicio</th>
+          <th>Unidad</th>
+          <th>Presupuesto</th>
+          <th>Cantidad</th>
+          <th>Valor<br />Unitario</th>
+          <th>Fecha<br />Adquuisici&oacute;n</th>
+          <th>Comentario</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- INICIO Modal Crear/Editar -->
+    <div id="modalAccion" class="modal">
+      <div class="modal-content">
+        <table class="table-modal">
+          <thead>
+            <tr>
+              <th colspan="2">
+                <h3 id="modalTitulo">Titulo</h3>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label for="accionProveedor">Proveedor:</label></td>
+              <td><select id="accionProveedor"></select></td>
+            </tr>
+            <tr>
+              <td><label for="accionServicio">Servicio:</label></td>
+              <td><select id="accionServicio"></select></td>
+            </tr>
+            <tr>
+              <td><label for="accionUnidad">Unidad:</label></td>
+              <td><select id="accionUnidad"></select></td>
+            </tr>
+            <tr>
+              <td><label for="accionPresupuesto">Presupuesto:</label></td>
+              <td><input type="number" id="accionPresupuesto"></td>
+            </tr>
+            <tr>
+              <td><label for="accionCantidad">Cantidad:</label></td>
+              <td><input type="number" id="accionCantidad"></td>
+            </tr>
+            <tr>
+              <td><label for="accionValor">Valor Unitario:</label></td>
+              <td><input type="number" id="accionValor"></td>
+            </tr>
+            <tr>
+              <td><label for="accionFecha">Fecha Adquuisici&oacute;n:</label></td>
+              <td><input type="date" id="accionFecha"></td>
+            </tr>
+            <tr>
+              <td><label for="accionComentario">Comentario:</label></td>
+              <td><input type="text" id="accionComentario"></td>
+            </tr>
+
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2" style="text-align: right;">
+                <button id="btnModalGuardar" class="btn-gris">Guardar</button>
+                <button id="btnModalCancelar" class="btn-gris">Cancelar</button>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+        <input type="hidden" id="accionId">
+      </div>
+    </div>
+  <!-- FIN Modal Crear/Editar -->
+  <!-- INICIO Modal Ver Historico -->
+   <div id="modalHistoria" class="modal">
+      <div class="modal-content-historia">
+        <table id="tablaHistoria" class="table-modal">
+          <thead>
+            <tr>
+              <th colspan="6">
+                <h3>Historico de cambios</h3>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Usuario</td>
+              <td>Fecha</td>
+              <td>Tipo</td>
+              <td>Cambio(s)</td>
+              <td>&nbsp;</td>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="6" style="text-align: right;">
+                <button id="btnModalHistoriaCerrar" class="btn-gris">Cerrar</button>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  <!-- FIN Modal Ver Historia -->
+
+  </section>
+  <footer>
+    <p>&copy; 2025 ADRES - Todos los derechos reservados</p>
+  </footer>
+</body>
+
+</html>
